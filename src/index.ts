@@ -91,11 +91,11 @@ export const API_ERROR = {
 export type VerdaccioError = HttpError & { code: number };
 
 function getError(code: number, message: string): VerdaccioError {
-  const err = Object.assign({}, createError(code, message), {
-    code
-  });
+  const httpError = createError(code, message);
 
-  return err;
+  httpError.code = code;
+
+  return httpError as VerdaccioError;
 }
 
 export function getConflict(message: string = API_ERROR.PACKAGE_EXIST): VerdaccioError {

@@ -6,6 +6,7 @@ describe('testing errors', () => {
 
     expect(err.code).toBeDefined();
     expect(err.code).toEqual(HTTP_STATUS.NOT_FOUND);
+    expect(err.statusCode).toEqual(HTTP_STATUS.NOT_FOUND);
     expect(err.message).toEqual('foo');
   });
 
@@ -78,6 +79,5 @@ describe('testing errors', () => {
 
     expect(err.code).toBeDefined();
     expect(err.code).toEqual(HTTP_STATUS.OK);
-    expect(err.message).toBeUndefined();
   });
 });

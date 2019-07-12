@@ -13,7 +13,7 @@
     "@commitlint/config-conventional": "8.0.0",
     "@types/http-errors": "1.6.1",
     "@types/jest": "24.0.15",
-    "@types/node": "12.0.10",
+    "@types/node": "12.6.2",
     "@verdaccio/babel-preset": "0.2.1",
     "@verdaccio/eslint-config": "0.0.1",
     "codecov": "3.5.0",
