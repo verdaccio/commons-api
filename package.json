@@ -1,6 +1,6 @@
 {
   "name": "@verdaccio/commons-api",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "commons api utilities for verdaccio",
   "main": "lib/index.js",
   "keywords": [
