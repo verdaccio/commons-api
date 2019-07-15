@@ -1,6 +1,18 @@
 import { getNotFound, VerdaccioError, HTTP_STATUS, getConflict, getBadData, getInternalError, API_ERROR, getUnauthorized, getForbidden, getServiceUnavailable, getCode } from '../src/index';
+import _ from 'lodash';
 
 describe('testing errors', () => {
+  test('should qualify as an native error', () => {
+    expect(_.isError(getNotFound())).toBeTruthy();
+    expect(_.isError(getConflict())).toBeTruthy();
+    expect(_.isError(getBadData())).toBeTruthy();
+    expect(_.isError(getInternalError())).toBeTruthy();
+    expect(_.isError(getUnauthorized())).toBeTruthy();
+    expect(_.isError(getForbidden())).toBeTruthy();
+    expect(_.isError(getServiceUnavailable())).toBeTruthy();
+    expect(_.isError(getCode(400, 'fooError'))).toBeTruthy();
+  });
+
   test('should test not found', () => {
     const err: VerdaccioError = getNotFound('foo');
 
